@@ -2,41 +2,29 @@
 
 Plataforma de Gestión Veterinaria navegable en el navegador, con datos simulados en **localStorage**. No requiere backend ni base de datos real.
 
-## Cómo abrir el sitio
+## Demo en línea
 
-### Opción A — Servidor local (recomendado)
+**https://hanaeru.github.io/PGVet-Prototipo-Frontend/**
+
+## Cómo ejecutarlo en local
+
+### Opción A — Servidor local
 
 ```bash
-cd "c:\Users\Hanane\Desktop\pgvet figma"
 npm start
 ```
 
 Abre **http://localhost:3456**
 
-(Sin instalar nada: `npx serve . -l 3456`)
+Alternativa sin instalar dependencias:
+
+```bash
+npx serve . -l 3456
+```
 
 ### Opción B — Abrir el archivo
 
 Abre `index.html` directamente en Chrome, Edge o Firefox.
-
-### Opción C — Publicar en internet (gratis)
-
-**Netlify (arrastrar y soltar)**  
-1. Ve a [app.netlify.com/drop](https://app.netlify.com/drop)  
-2. Arrastra la carpeta `pgvet figma` (solo `index.html`, `styles.css`, `script.js`)  
-3. Obtienes una URL tipo `https://pgvet-xxxxx.netlify.app`
-
-**Vercel**  
-1. Instala [Vercel CLI](https://vercel.com/cli): `npm i -g vercel`  
-2. En esta carpeta: `vercel`  
-3. Sigue el asistente → URL pública al instante
-
-**GitHub Pages**  
-1. Sube la carpeta a un repo de GitHub  
-2. Settings → Pages → Source: main branch, carpeta `/ (root)`  
-3. URL: `https://tu-usuario.github.io/nombre-repo`
-
-Después de publicar, inicia sesión con los usuarios de prueba y navega por el menú lateral.
 
 > **Nota:** Los datos se guardan en `localStorage`. Para reiniciar el prototipo, abre las herramientas de desarrollador (F12) → Application → Local Storage → elimina las claves que empiezan con `pgvet_`.
 
@@ -106,26 +94,13 @@ Después de publicar, inicia sesión con los usuarios de prueba y navega por el 
 | **Rendimiento simulado** | Navegación instantánea sin peticiones de red |
 | **Protección de datos** | Tutor no accede a Staff, Inventory ni pagos ajenos |
 
-## Figma Make (prototipo interactivo en Figma)
-
-El MCP de Figma **no puede crear archivos Make** automáticamente. Para generar uno nuevo con los 11 módulos:
-
-1. Abre Figma → **+** → **Make**
-2. Nombra el archivo **PGVet — Plataforma Completa**
-3. Abre `MAKE_NUEVO_COMPLETO.md`, copia el prompt entre `--- INICIO PROMPT ---` y `--- FIN PROMPT ---`, y pégalo en el chat de Make
-4. Usa **Preview** y prueba con `admin@pgvet.cl` / `1234`
-
-El prototipo local (`index.html`) es la referencia funcional exacta si Make no genera algún módulo a la primera.
-
 ## Archivos del proyecto
 
 ```
-index.html              → Estructura HTML (login, shell, modal)
-styles.css              → Estilo retro Windows 98 / PGVet
-script.js               → Lógica, rutas, CRUD y localStorage
-MAKE_NUEVO_COMPLETO.md  → Prompt para crear Figma Make nuevo
-FIGMA_MAKE_PROMPT.md    → Prompt para actualizar Make existente
-README.md               → Esta documentación
+index.html   → Estructura HTML (login, shell, modal)
+styles.css   → Estilo retro Windows 98 / PGVet
+script.js    → Lógica, rutas, CRUD y localStorage
+README.md    → Esta documentación
 ```
 
 ## Diseño visual
