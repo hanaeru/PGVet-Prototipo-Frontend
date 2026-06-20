@@ -1,0 +1,12 @@
+{
+  "name": "pgvet",
+  "version": "1.0.0",
+  "description": "PGVet — Plataforma de Gestión Veterinaria (prototipo funcional)",
+  "private": true,
+  "scripts": {
+    "start": "serve . -l 3456",
+    "dev": "serve . -l 3456"
+  },
+  "keywords": ["pgvet", "veterinaria", "prototipo"],
+  "license": "UNLICENSED"
+}
